@@ -1,0 +1,11 @@
+import os
+to_return = {}
+for (current_dir, directories, files) in os.walk(os.getcwd()):
+    files = directories + files
+    for file in files:
+        file = os.path.join(current_dir, file)
+        real = os.path.realpath(file)
+        if file != os.path.realpath(file):
+            to_return[file] = real
+for key in sorted(to_return.keys()):
+    print key, to_return[key]

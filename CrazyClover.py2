@@ -1,0 +1,9 @@
+def crazyClover(leaves):
+    if int(leaves[-2:])%4 ==0:
+        return True
+    return False
+
+
+
+leaves = "32565527543186766526240463003010854254680"
+print(crazyClover(leaves))
